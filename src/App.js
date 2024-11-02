@@ -9,7 +9,7 @@ function App() {
     <div className="min-h-screen bg-gradient-to-b from-[#F9FAFB] to-[#D2D6DB]">
       <Router>
         <div>
-            {/* <Navbar /> */}
+            <Navbar />
             <ProductDetails />
             <Routes>
                 {/* Define your routes here */}
