@@ -39,7 +39,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu */}
-            <ul className={nav ? 'fixed md:hidden left-0 top-0 w-[85%] h-full border-r border-neutral-600 bg-white' 
+            <ul className={nav ? 'fixed md:hidden left-0 top-0 w-[90%] h-full border-r border-neutral-600 bg-white' 
                                   : 'fixed top-0 bottom-0 left-[100%] flex flex-col'}
             >
                 <img className="py-10 px-5" src={StyleNest}/>
