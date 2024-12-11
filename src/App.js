@@ -11,12 +11,11 @@ function App() {
       <Router>
         <div>
             <Navbar />
-            {/* <ProductGrid /> */}
-            {/* <ProductDetails /> */}
             <Routes>
                 {/* Define your routes here */}
                 <Route path="/shop-all" element={<ShopAll/>} />
                 <Route path="/latest-arrivals" element={<LatestArrivals />} />
+                <Route path="/product-details" element={<ProductDetails/>} />
             </Routes>
         </div>
       </Router>
