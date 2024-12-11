@@ -18,7 +18,7 @@ const ProductGrid = () => {
         {id:5, product:Product5, name:"Sunbeam Mules", price:"$68"},
         {id:6, product:Product6, name:"Azure Attitude Shades", price:"$45"},
         {id:7, product:Product7, name:"Voyager Hoodie", price:"$76"},
-        {id:8, product:Product8, name:"LA Baseball Hat", price:"20"}
+        {id:8, product:Product8, name:"LA Baseball Hat", price:"$20"}
     ]
 
     return (
