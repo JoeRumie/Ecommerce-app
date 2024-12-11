@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ShopAll from "./Shopall";
 import LatestArrivals from "./LatestArrivals";
 import ProductDetails from "./product-details/ProductDetails";
+import ProductGrid from "./product-grid/ProductGrid";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Router>
         <div>
             <Navbar />
-            <ProductDetails />
+            {/* <ProductGrid /> */}
+            {/* <ProductDetails /> */}
             <Routes>
                 {/* Define your routes here */}
                 <Route path="/shop-all" element={<ShopAll/>} />

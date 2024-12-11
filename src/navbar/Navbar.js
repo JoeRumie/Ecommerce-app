@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import StyleNest from '../Logo.png';
 import Cart from '../cta-buttons.png';
-import Menu from '../menu.png';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 const Navbar = () => {
