@@ -1,7 +1,7 @@
 const LatestArrivals = () => {
     return (
         <div>
-            hello
+            Latest Arrivals
         </div>
     )
 };

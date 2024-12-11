@@ -24,7 +24,7 @@ const Navbar = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-12">
                 {navItems.map(item => (
-                    <Link className="hover:text-black" key={item.id}>
+                    <Link to={item.path} className="hover:text-black" key={item.id}>
                         {item.text}
                     </Link>
                 ))}
@@ -46,7 +46,7 @@ const Navbar = () => {
             
                 <div className="flex flex-col px-8 py-15 space-y-5">
                     {navItems.map(item => (
-                        <Link className="hover:text-black" key={item.id}>
+                        <Link to={item.path} className="hover:text-black" key={item.id}>
                             {item.text}
                         </Link>
                     ))}
