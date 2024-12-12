@@ -8,7 +8,7 @@ const Navbar = () => {
     const [nav, setNav] = useState(false);
 
     const navItems = [
-        {id:1, text: 'Shop all', path: '/shop-all'},
+        {id:1, text: 'Add Product', path: '/add-product'},
         {id:2, text: 'Latest arrivals', path: '/latest-arrivals'}
     ]
 

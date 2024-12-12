@@ -8,18 +8,18 @@ import Product6 from '../product-img-6.png';
 import Product8 from '../product-img-7.png';
 import Product7 from '../product-img-8.png';
 
-const ProductGrid = () => {
+const ProductGrid = ({products}) => {
 
-    const products = [
-        {id:1, product:Product1, name:"Urban Drift Bucket", price:"$15"},
-        {id:2, product:Product2, name:"Tangerine Mini Tote", price:"$150"},
-        {id:3, product:Product3, name:"Elemental Sneakers", price:"$80"},
-        {id:4, product:Product4, name:"Metro Hoodie", price:"$81"},
-        {id:5, product:Product5, name:"Sunbeam Mules", price:"$68"},
-        {id:6, product:Product6, name:"Azure Attitude Shades", price:"$45"},
-        {id:7, product:Product7, name:"Voyager Hoodie", price:"$76"},
-        {id:8, product:Product8, name:"LA Baseball Hat", price:"$20"}
-    ]
+    // const products = [
+    //     {id:1, product:Product1, name:"Urban Drift Bucket", price:"$15"},
+    //     {id:2, product:Product2, name:"Tangerine Mini Tote", price:"$150"},
+    //     {id:3, product:Product3, name:"Elemental Sneakers", price:"$80"},
+    //     {id:4, product:Product4, name:"Metro Hoodie", price:"$81"},
+    //     {id:5, product:Product5, name:"Sunbeam Mules", price:"$68"},
+    //     {id:6, product:Product6, name:"Azure Attitude Shades", price:"$45"},
+    //     {id:7, product:Product7, name:"Voyager Hoodie", price:"$76"},
+    //     {id:8, product:Product8, name:"LA Baseball Hat", price:"$20"}
+    // ]
 
     return (
         // Global Container
@@ -36,17 +36,17 @@ const ProductGrid = () => {
 
 
                 {/* Grid Container */}
-                <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-4 ">
+                <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-4 justify-items-center">
                     {products.map(item => (
-                        <Link to={"/product-details"} key={item.id}>
+                        <Link to={`/product-details/${item.id}`} key={item.id}>
                             <div className="relative group">
-                                <img src={item.product} alt="" class="w-72 rounded-xl transition-transform duration-300 transform group-hover:scale-105"/>
+                                <img src={item.image} alt={item.name} class="w-72 rounded-xl transition-transform duration-300 transform group-hover:scale-105"/>
                                 <div className=" font-sans text-neutral-900">
                                     <div className="p-3 hover:text-indigo-600">
                                         <p className="text-base">{item.name}</p>
                                     </div>
                                     <div className="px-3">
-                                        <p className="text-base">{item.price}</p>
+                                        <p className="text-base">${item.price}</p>
                                     </div>
                                 </div>
                             </div>
