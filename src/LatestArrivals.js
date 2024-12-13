@@ -1,7 +1,9 @@
+import ProductGrid from "./product-grid/ProductGrid";
+
 const LatestArrivals = () => {
     return (
         <div>
-            Latest Arrivals
+            <ProductGrid />
         </div>
     )
 };
