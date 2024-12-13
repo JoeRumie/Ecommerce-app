@@ -13,7 +13,6 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#F9FAFB] to-[#D2D6DB]">
       <Router>
-        <div>
             <Navbar />
             <Routes>
                 {/* Define your routes here */}
@@ -21,7 +20,6 @@ function App() {
                 <Route path="/latest-arrivals" element={<ProductGrid products={products}/>} />
                 <Route path="/product-details/:id" element={<ProductDetails products={products}/>} />
             </Routes>
-        </div>
       </Router>
     </div>
   );
