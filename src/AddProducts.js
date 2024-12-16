@@ -48,7 +48,7 @@ const ProductUploader = ({products, setProducts}) => {
     };
 
     const handleAddProduct = () => {
-        if (!productName || !uploadedImage) {
+        if (!productName || !uploadedImage || !productPrice || !productDescription) {
             alert("Please provide a product name and upload an image.");
             return;
         }

@@ -29,7 +29,10 @@ const Navbar = () => {
                 ))}
             </div>
             
-            <img src={Cart}/>
+            <Link to={'/cart'}>
+                <img src={Cart}/>
+            </Link>
+            
             
 
             {/* Mobile Navigation */}

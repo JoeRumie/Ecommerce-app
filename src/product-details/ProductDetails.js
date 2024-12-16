@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Arrow from '../icon-arrow.svg';
 import { useParams } from 'react-router-dom';
 
-const ProductDetails = ({ products }) => {
+const ProductDetails = ({ products, cart, setCart }) => {
     const { id } = useParams();
     const product = products.find(p => p.id === id);
 
@@ -32,6 +32,26 @@ const ProductDetails = ({ products }) => {
             newState[index] = !newState[index];
             return newState;
         })
+    }
+
+    const addToCart = () => {
+
+        if (quantity == 0) {
+            alert('Quantity cannot be 0');
+            return;
+        }
+
+        const cartProduct = {
+            id: id,// Unique ID for the product
+            name: product.name,
+            price: product.price,
+            description: product.description,
+            image: product.image, // Use the image preview (base64 data URL)
+            quantity: quantity
+        }
+
+        setCart([...cart, cartProduct]);
+        console.log(cart);
     }
 
     if (!product) {
@@ -184,7 +204,7 @@ const ProductDetails = ({ products }) => {
 
                         {/* Button Group */}
                         <div className="group">
-                            <button className="w-full h-9 bg-indigo-700 text-white rounded-xl group-hover:scale-105 duration-100">
+                            <button onClick={addToCart} className="w-full h-9 bg-indigo-700 text-white rounded-xl group-hover:scale-105 duration-100">
                                 Add to cart
                             </button>
 
